@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    padding-top: 1.5rem;
+    text-shadow: 2px 3px 5px pink;
+    padding-bottom: 2rem;
+}
+
+body {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    min-height: 100vh;
+}
+
+#sideForm {
+    text-align: left;
+    padding-top: 1rem;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 3 1 1850px;
+    padding-top: 1.9rem;
+    box-sizing: border-box;
+}
+
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.counterDivsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+}
+
+.counterDivsWrapper div {
+    height: 2rem;
+    width: 10rem;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px 1px palevioletred;
+    padding-top: 0.4rem;
+}
+
+.counterDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.totalBooks,
+.readBooks,
+.unreadBooks {
+    width: 2rem;
+    text-align: center;
+}
+
+table tr {
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+
+table {
+    text-shadow: 1px 1px 2px pink;
+    padding-left: 5.2rem;
+}
+
+th {
+    height: 2rem;
+    width: 11rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#submit {
+    background-color: rgb(212, 138, 163);
+    width: 10.4rem;
+    height: 2rem;
+    border: none;
+    box-shadow: 1px 1px 1px 1px palevioletred;
+}
+
+label {
+    text-shadow: 1px 1px 2px pink;
+}
+
+.elements {
+    margin-bottom: 1.5rem;
+}
+
+#titleError,
+#authorError,
+#numberOfPagesError {
+    font-size: x-small;
+    color: red;
+    height: 1rem;
+}
+
+.deleteAll {
+    background-color: antiquewhite;
+    height: 2rem;
+    width: 10rem;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px 1px palevioletred;
+    padding-top: 0.2rem;
+    font-size: medium;
+}
+
+#deleteAll {
+    padding-top: 0;
+    border: none;
+    box-shadow: none;
+}

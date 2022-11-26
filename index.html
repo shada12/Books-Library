@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <title>Books Library</title>
+
+<body>
+  <div id="sideForm">
+    <header>
+      <h1>My Library</h1>
+    </header>
+    <form name="form" action="" method="post">
+      <div class="wrapper">
+        <div class="formDiv">
+          <div class="elements">
+            <label for="title">Book title*</label>
+            <input class="input" type="text" name="title" id="title" placeholder="Title" required>
+            <p id="titleError"></p>
+          </div>
+          <div class="elements">
+            <label for="author">Book author*</label>
+            <input class="input" type="text" name="author" id="author" placeholder="Author" required>
+            <p id="authorError"></p>
+          </div>
+          <div class="elements">
+            <label for="numberOfPages">Number of pages*</label>
+            <input class="input" type="number" name="numberOfPages" id="numberOfPages" placeholder="Number of pages"
+              required>
+            <p id="numberOfPagesError"></p>
+          </div>
+          <div class="elements">
+            <input type="checkbox" id="bookStatus" name="bookStatus" value="bookStatus">
+            <label for="bookStatus"> I have read this book!</label>
+          </div>
+          <input type="button" name="submit" id="submit" onclick="addBookToLibrary()" value="Add Book">
+        </div>
+      </div>
+    </form>
+  </div>
+  <main>
+    <div class="mainWrapper">
+      <div class="counterDivsWrapper">
+        <div class="counterDiv">
+          <p>Total Books: </p>
+          <p class="totalBooks"></p>
+        </div>
+        <div class="counterDiv">
+          <p>Read Books: </p>
+          <p class="readBooks"></p>
+        </div>
+        <div class="counterDiv">
+          <p>Unread Books: </p>
+          <p class="unreadBooks"></p>
+        </div>
+        <div class="counterDiv" id="deleteAll">
+          <input type="button" name="deleteAll" class="deleteAll" onclick="deleteAll()" value="Delete All">
+        </div>
+      </div>
+      <div class="tableDiv">
+        <table class="table">
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages Number</th>
+            <th>Read Status</th>
+            <th>Remove</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
