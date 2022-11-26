@@ -20,7 +20,7 @@ body {
     background-color: antiquewhite;
     display: flex;
     flex-direction: row;
-    padding-left: 3rem;
+    padding-left: 4rem;
     padding-top: 1rem;
     min-height: 100vh;
 }
