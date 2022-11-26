@@ -11,7 +11,7 @@ html {
 }
 
 :root {
-    --body-color: antiquewhite;
+    --body-color: rgba(250, 235, 215, 0.858);
     --light-pink: pink;
     --dark-pink: palevioletred;
     --gray-color: gray;
@@ -33,7 +33,6 @@ body {
 }
 
 #sideForm {
-    background-color: hsla(351, 94%, 80%, 0.226);
     background-color: hsla(351, 84%, 83%, 0.272);
     text-align: left;
     padding-top: 1rem;
