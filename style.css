@@ -27,21 +27,27 @@ body {
     background-color: var(--body-color);
     display: flex;
     flex-direction: row;
-    padding-left: 4rem;
-    padding-top: 1rem;
+    padding-left: rem;
+    padding-top: rem;
     min-height: 100vh;
 }
 
 #sideForm {
+    background-color: hsla(351, 94%, 80%, 0.226);
+    background-color: hsla(351, 84%, 83%, 0.272);
     text-align: left;
     padding-top: 1rem;
     box-sizing: border-box;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
 }
 
 main {
     flex: 3 1 1850px;
     padding-top: 2.5rem;
     box-sizing: border-box;
+
 }
 
 .mainWrapper {
@@ -129,11 +135,11 @@ label {
     width: 10rem;
     border: 1px solid var(--gray-color);
     box-shadow: 1px 1px 1px 1px var(--dark-pink);
-    padding-top: 0.2rem;
     font-size: medium;
 }
 
 #deleteAll {
     border: none;
     box-shadow: none;
+    padding-top: 0;
 }
