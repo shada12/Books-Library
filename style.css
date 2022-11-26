@@ -27,7 +27,7 @@ body {
     background-color: var(--body-color);
     display: flex;
     flex-direction: row;
-    padding-left: 4rem;
+    padding-left: 5rem;
     padding-top: 1rem;
     min-height: 100vh;
 }
