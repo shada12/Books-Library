@@ -10,14 +10,21 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+:root {
+    --body-color: antiquewhite;
+    --light-pink: pink;
+    --dark-pink: palevioletred;
+    --gray-color: palevioletred;
+  }
+
 h1 {
     padding-top: 1.5rem;
-    text-shadow: 2px 3px 5px pink;
+    text-shadow: 2px 3px 5px var(--light-pink);
     padding-bottom: 2rem;
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: var(--body-color);
     display: flex;
     flex-direction: row;
     padding-left: 4rem;
@@ -53,8 +60,8 @@ main {
 .counterDivsWrapper div {
     height: 2rem;
     width: 10rem;
-    border: 1px solid gray;
-    box-shadow: 1px 1px 1px 1px palevioletred;
+    border: 1px solid var(--gray-color);
+    box-shadow: 1px 1px 1px 1px var(--dark-pink);
     padding-top: 0.4rem;
 }
 
@@ -62,7 +69,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: var(--body-color);
 }
 
 .totalBooks,
@@ -73,13 +80,13 @@ main {
 }
 
 table tr {
-    border: 1px solid gray;
+    border: 1px solid var(--gray-color);
     box-shadow: 1px 1px 1px 1px #888888;
 }
 
 table {
-    text-shadow: 1px 1px 2px pink;
-    padding-left: 10.2rem;
+    text-shadow: 1px 1px 2px var(--light-pink);
+    padding-left: 9rem;
 }
 
 th {
@@ -94,11 +101,11 @@ th {
     width: 10.4rem;
     height: 2rem;
     border: none;
-    box-shadow: 1px 1px 1px 1px palevioletred;
+    box-shadow: 1px 1px 1px 1px var(--dark-pink);
 }
 
 label {
-    text-shadow: 1px 1px 2px pink;
+    text-shadow: 1px 1px 2px var(--light-pink);
 }
 
 .elements {
@@ -114,17 +121,16 @@ label {
 }
 
 .deleteAll {
-    background-color: antiquewhite;
+    background-color: var(--body-color);
     height: 2rem;
     width: 10rem;
-    border: 1px solid gray;
-    box-shadow: 1px 1px 1px 1px palevioletred;
+    border: 1px solid var(--gray-color);
+    box-shadow: 1px 1px 1px 1px var(--dark-pink);
     padding-top: 0.2rem;
     font-size: medium;
 }
 
 #deleteAll {
-    padding-top: 0;
     border: none;
     box-shadow: none;
 }
