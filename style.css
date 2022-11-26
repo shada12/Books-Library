@@ -14,7 +14,7 @@ html {
     --body-color: antiquewhite;
     --light-pink: pink;
     --dark-pink: palevioletred;
-    --gray-color: palevioletred;
+    --gray-color: gray;
   }
 
 h1 {
@@ -86,7 +86,7 @@ table tr {
 
 table {
     text-shadow: 1px 1px 2px var(--light-pink);
-    padding-left: 9rem;
+    padding-left: 9.2rem;
 }
 
 th {
