@@ -15,7 +15,7 @@ html {
     --light-pink: pink;
     --dark-pink: palevioletred;
     --gray-color: gray;
-  }
+}
 
 h1 {
     padding-top: 1.5rem;
@@ -39,14 +39,12 @@ body {
     box-sizing: border-box;
     padding-left: 2rem;
     padding-right: 2rem;
-    
 }
 
 main {
     flex: 3 1 1850px;
     padding-top: 2.5rem;
     box-sizing: border-box;
-
 }
 
 .mainWrapper {
@@ -55,9 +53,10 @@ main {
     row-gap: 1.5rem;
 }
 
-form{
+form {
     padding-top: 1rem;
 }
+
 .counterDivsWrapper {
     display: flex;
     flex-direction: row;

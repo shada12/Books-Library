@@ -3,12 +3,15 @@ let myLibrary = [];
 let validTitle;
 let validAuthor;
 let validPagesNumber;
+let ifNewBook;
 
-function Book(title, author, numberOfPages, readStatus) {
-  this.title = title;
-  this.author = author;
-  this.numberOfPages = numberOfPages;
-  this.readStatus = readStatus;
+class Book {
+  constructor(title, author, numberOfPages, readStatus) {
+    this.title = title;
+    this.author = author;
+    this.numberOfPages = numberOfPages;
+    this.readStatus = readStatus;
+  }
 }
 
 function addBookToLibrary() {
@@ -22,14 +25,22 @@ function addBookToLibrary() {
   let numberOfPages = document.getElementById('numberOfPages').value;
   let readStatus = document.getElementById('bookStatus').checked;
 
-  validateTitle(title);
-  validateAuthor(author);
+  validateTitle(title.trim());
+  validateAuthor(author.trim());
   validateNumberOfPages(numberOfPages);
 
   if (validTitle && validAuthor && validPagesNumber) {
     let book = new Book(title, author, numberOfPages, readStatus);
-    myLibrary.push(book);
-    displayBooks();
+
+    checkIfNewBook(book);
+
+    if (ifNewBook) {
+      myLibrary.push(book);
+      displayBooks();
+      document.getElementById('titleError').innerHTML = "";
+    } else {
+      document.getElementById('titleError').innerHTML = "This book is already exist!";
+    }
   }
 }
 
@@ -88,7 +99,6 @@ function displayBooks() {
   const removeBooks = document.querySelectorAll('.removeTrash');
   removeBooks.forEach(removeBook => {
     removeBook.addEventListener('click', function handleClick(event) {
-      console.log('box clicked', event);
       removeBook.setAttribute('style', 'background-color: yellow;');
       const target = event.target;
       var buttonIndex = target.getAttribute('data-index');
@@ -111,7 +121,6 @@ function displayBooks() {
   const deleteAll = document.querySelectorAll('.deleteAll');
   deleteAll.forEach(status => {
     status.addEventListener('click', function handleClick(event) {
-
       myLibrary = [];
       displayBooks()
     });
@@ -156,34 +165,22 @@ function booksCounter() {
 }
 
 function validateTitle(title) {
-  if (title === "") {
+  if (title == "") {
     document.getElementById('titleError').innerHTML = "Title is required";
   }
-  else if (title !== "") {
-    const titleFormat = /^[A-Za-z]+(\s*[A-Za-z]+)*$/;
-    if (titleFormat.test(title)) {
-      document.getElementById('titleError').innerHTML = "";
-      validTitle = true;
-    }
-    else {
-      document.getElementById('titleError').innerHTML = "Title shouldn't have symbols or numbers";
-    }
+  else {
+    document.getElementById('titleError').innerHTML = "";
+    validTitle = true;
   }
 }
 
 function validateAuthor(author) {
-  if (author === "") {
+  if (author == "") {
     document.getElementById('authorError').innerHTML = "author is required";
   }
-  else if (author !== "") {
-    const authorFormat = /^[A-Za-z]+(\s*[A-Za-z]+)*$/;
-    if (authorFormat.test(author)) {
-      document.getElementById('authorError').innerHTML = "";
-      validAuthor = true;
-    }
-    else {
-      document.getElementById('authorError').innerHTML = "Author shouldn't have symbols or numbers";
-    }
+  else {
+    document.getElementById('authorError').innerHTML = "";
+    validAuthor = true;
   }
 }
 
@@ -197,5 +194,16 @@ function validateNumberOfPages(number) {
   else if (parseInt(number) > 0) {
     document.getElementById('numberOfPagesError').innerHTML = "";
     validPagesNumber = true;
+  }
+}
+
+function checkIfNewBook(book) {
+
+  ifNewBook = true;
+  for (i = 0; i < myLibrary.length; i++) {
+
+    if ((myLibrary[i].title === book.title) && (myLibrary[i].author === book.author)) {
+      ifNewBook = false;
+    }
   }
 }
